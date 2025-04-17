@@ -1,0 +1,173 @@
+h2, h3 {    
+    font-family: 'Bungee', sans-serif;
+    font-size: xx-large;
+    color: white;
+    -webkit-text-stroke: 1px rgb(0, 0, 0);    
+    margin-inline: 40px;
+}
+
+h5 {
+    font-family: Roboto, sans-serif;
+    font-size: x-small;
+    color: rgb(0, 0, 0);    
+    margin-inline: 40px;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+}
+
+#board {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;        
+    background-size: cover; 
+    transition: background-image 1s ease-in-out;        
+}
+
+#area {
+    width: 100vw;      
+    height: 100%;          
+}
+
+
+/* ANIMASI LARI */
+@keyframes lari {
+    0% {
+        background: url('images/dino/default/run1.png');
+        background-size: 100% 100%;
+    }
+
+    20% {
+        background: url('images/dino/default/run2.png');
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background: url('images/dino/default/run7.png');
+        background-size: 100% 100%;
+    }
+
+    75% {
+        background: url('images//dino/default/run8.png');
+        background-size: 100% 100%;
+    }
+}
+
+/* DINO */
+#dino {
+    width: 110px;
+    height: 110px;
+    background: url('images/dino/default/run1.png');
+    background-size: 100% 100%;
+    position: absolute;
+    margin-bottom: 55px;
+    margin-left: 50px;
+    animation: lari 0.3s infinite; 
+    transition: margin-bottom 0.8s ease;   
+    bottom: 0;         
+}
+
+#dino.freeze {
+    animation: none;
+    background: url('images/dino/default/run7.png');
+    background-size: 100% 100%;    
+}
+/* END DINO */
+
+/* BOX */
+.box {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 55px;
+    position: absolute;    
+    background: url('images/obstacle/redbox.png');
+    background-size: 100% 100%;
+
+}
+
+.box.freeze{
+    animation: none;
+}
+
+/* END BOX */
+
+
+/* ANIMASI KOIN */
+@keyframes coin {
+    100% { background-position: -81px 0; }
+}
+
+.coin_sprite {                       
+    display: block;
+    width: 15px;
+    height: 20px;
+    margin-bottom: 80px;
+    position: absolute;
+    bottom: 0;    
+    background: url('images/coin/coin.png'); 
+    background-repeat: no-repeat;
+    background-color: transparent;
+    animation: coin 0.5s steps(5) infinite;
+    transform: scale(2);
+}
+
+/* END ANIMASI KOIN */
+
+/* GAME OVER */
+#game-over {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    text-align: center;
+}
+
+#game-over h2 {
+    margin: 0 0 15px;
+}
+
+#retry-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#retry-button:hover {
+    background: darkred;
+}
+
+/* END GAME OVER */
+
+@keyframes explode {
+    100% { background-position: -1537px 0; }
+}
+
+.explode{
+    display: block;
+    width: 128px;
+    height: 164px;
+    position: absolute;
+    margin-bottom: 55px;
+    background: url("images/effect/explode.png");
+    background-repeat: no-repeat;
+    background-color: transparent;
+    animation: explode 1s steps(12);            
+    transform: scale(2);
+    /* border: 1px solid ; */
+}

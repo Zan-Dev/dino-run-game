@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Game Dino Run</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+
+</head>
+
+<body onclick="jump()">
+    <div id="board" style="background-position:0px;">        
+        <div id="header">
+            <h3>Score : <span id="score">0</span> m</h3> 
+            <h5 style="position: fixed; text-align: center; left: 50%; transform: translateX(-50%);">
+                <div>Created by Septian Eko Prasetyo, S.Pd., M.Eng. | Modified by Ahmad Fauzan - 5302421036</div>                
+            </h5>       
+            <h3>Coin : <span id="coin">0</span></h3>        
+        </div>        
+        <div id="area">
+            <div id="dino"></div>                        
+        </div>
+
+        <div id="game-over">
+            <h2 style="text-align: center;">Game Over</h2>
+            <p>Skor Kamu: <span id="final_score">0</span></p>
+            <button id="retry-button" onclick="retryGame()">Retry</button>
+        </div>
+    </div>
+    <script src="script.js" tyle="text/javascript"></script>
+</body>
+
+</html>

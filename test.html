@@ -1,0 +1,32 @@
+<!-- COBA COBA -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        @keyframes explode {
+            100% { background-position: -1537px 0; }
+        }
+
+        .explode{
+            /* display: block; */
+            width: 128px;
+            height: 164px;
+            /* position: absolute; */
+            background: url("images/effect/explode.png");
+            background-repeat: no-repeat;
+            animation: explode 1s steps(12) infinite;            
+            transform: scale(0.5);
+            border: 1px solid ;
+        }
+    </style>
+
+    <div class="explode"></div>
+
+
+</body>
+</html>
